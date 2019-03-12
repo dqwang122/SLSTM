@@ -12,5 +12,6 @@ def get_args():
     arg.add_argument('--max-len', type=int, default=100)
     arg.add_argument('--use-cls', type=bool, default=False)
     arg.add_argument('--use_lstm', type=bool, default=False)
+    arg.add_argument('--gpu', type=str, default='0')
     arg.add_argument('-l', '--layer', type=int, default=0)
     return arg.parse_args()

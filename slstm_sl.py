@@ -15,6 +15,7 @@ for k in arg.__dict__.keys():
     print(k, arg.__dict__[k])
 
 save_dir = os.path.join("./save", arg.dataset)
+os.environ['CUDA_VISIBLE_DEVICES'] = arg.gpu
 
 if os.path.exists(f'./cache/{arg.dataset}_train_dataset.pkl'):
     train_dataset = _pickle.load(open(f'./cache/{arg.dataset}_train_dataset.pkl', 'rb'))

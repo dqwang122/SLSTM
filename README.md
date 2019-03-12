@@ -1,6 +1,6 @@
 # Rebuilt Sentence-State LSTM
 
-This is our project report for the course "Natural Network and Deep Learning, Autumn 2018". 
+This is our project for the course "Natural Network and Deep Learning, Autumn 2018". 
 We reproduce the ACL 2018 paper [Sentence-State LSTM for Text Representation](https://arxiv.org/abs/1805.02474) based on the structure of [FastNLP](https://github.com/fastnlp/fastNLP).
 We test our rebuilt model on classification and sequence labeling (POS and NER) tasks.
 Besides, we also apply the famous modular BERT on this task to explore if the pretrained language model can bring about additional promotions.
@@ -68,10 +68,10 @@ $ pip install .
 
 ### Classification
 ``` shell
-$ CUDA_VISIBLE_DEVICES=0 python slstm_cls.py --dataset mr --data_dir data/cls --glove_path /path/to/glove.42B.300d --batch_size 16
+$ python slstm_cls.py --dataset mr --data_dir data/cls --glove_path /path/to/glove.42B.300d --batch_size 16 --gpu 0
 ```
 
 ### Sequence labeling
 ``` shell
-$ CUDA_VISIBLE_DEVICES=0 python slstm_sl.py --dataset pos --data_dir data/pos --glove_path /path/to/glove.42B.300d --batch_size 16
+$ python slstm_sl.py --dataset pos --data_dir data/pos --glove_path /path/to/glove.42B.300d --batch_size 16 --gpu 0
 ```
